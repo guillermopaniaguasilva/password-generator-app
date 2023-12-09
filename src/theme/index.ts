@@ -7,16 +7,14 @@ const breakpoints = {
 };
 
 const colors = {
-  black: '#050505',
-  lightBlack: '#1F1F1F',
-  lighterBlack: '#2D2D2D',
-  lightestBlack: '#3A3A3A',
-  grey: '#757575',
-  lightGrey: '#E9E9E9',
-  lighterGrey: '#F4F4F4',
-  white: '#FFFFFF',
-  purple: '#A445ED',
-  red: '#FF5252',
+  veryDarkGrey: '#24232C',
+  grey: '#817D92',
+  white: '#E6E5EA',
+  black: '#18171F',
+  green: '#A4FFAF',
+  red: '#F64A4A',
+  orange: '#FB7C58',
+  yellow: '#F8CD65',
 };
 
 const fontSizes = {
@@ -43,9 +41,7 @@ const fontWeights = {
 };
 
 const fontFamilies = {
-  Mono: 'Inconsolata',
-  Serif: 'Inter',
-  'Sans Serif': 'Lora',
+  main: 'JetBrains Mono',
 };
 
 declare module 'styled-components' {
@@ -56,16 +52,14 @@ declare module 'styled-components' {
       desktop: string;
     };
     colors: {
-      black: string;
-      lightBlack: string;
-      lighterBlack: string;
-      lightestBlack: string;
+      veryDarkGrey: string;
       grey: string;
-      lightGrey: string;
-      lighterGrey: string;
       white: string;
-      purple: string;
+      black: string;
+      green: string;
       red: string;
+      orange: string;
+      yellow: string;
     };
     fontSizes: {
       headingL: string;
@@ -88,13 +82,8 @@ declare module 'styled-components' {
       bodyS: string;
     };
     fontFamilies: {
-      [key: string]: string;
-      Mono: string;
-      Serif: string;
-      'Sans Serif': string;
+      main: string;
     };
-    isDarkThemeOn: boolean;
-    font: string;
   }
 }
 
@@ -105,8 +94,6 @@ const theme: DefaultTheme = {
   fontLineHeights,
   fontWeights,
   fontFamilies,
-  isDarkThemeOn: false,
-  font: 'Inconsolata',
 };
 
 export default theme;
