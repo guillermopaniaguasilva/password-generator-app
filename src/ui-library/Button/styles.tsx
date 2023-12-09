@@ -10,6 +10,12 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.green};
   color: ${({ theme }) => theme.colors.veryDarkGrey};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.veryDarkGrey};
+    color: ${({ theme }) => theme.colors.green};
+    border: 2px solid ${({ theme }) => theme.colors.green};
+  }
 `;
 
 export const Icon = styled.img`

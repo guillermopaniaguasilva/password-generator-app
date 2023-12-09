@@ -3,6 +3,8 @@ import React from 'react';
 import Button from '.';
 // @ts-ignore
 import arrowIcon from '../../assets/images/icon-arrow-right.svg';
+// @ts-ignore
+import hoverIcon from '../../assets/images/bx_arrow-to-left.svg';
 
 const meta = {
   title: 'UI Library/Button',
@@ -35,6 +37,7 @@ export const WithIcon: Story = {
   args: {
     text: 'Button with icon',
     iconSrc: arrowIcon,
+    hoverIconSrc: hoverIcon,
     iconAlt: 'arrow right',
     onClick: () => alert('This is a button with icon.'),
   },
