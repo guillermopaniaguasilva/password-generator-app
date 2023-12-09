@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  font-family: 'JetBrainsMono';
+}
