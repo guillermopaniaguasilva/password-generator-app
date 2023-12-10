@@ -7,7 +7,10 @@ type RangeSelectorProps = {
   setCharLength: (charLength: number) => void;
 };
 
-const RangeSelector = ({ charLength, setCharLength }: RangeSelectorProps) => {
+export default function RangeSelector({
+  charLength,
+  setCharLength,
+}: RangeSelectorProps) {
   const sliderRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -37,6 +40,4 @@ const RangeSelector = ({ charLength, setCharLength }: RangeSelectorProps) => {
       </StyledRangeInput>
     </>
   );
-};
-
-export default RangeSelector;
+}

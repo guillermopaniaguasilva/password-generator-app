@@ -33,7 +33,7 @@ const StrengthIndicatorStory: React.FC = () => {
 };
 
 const meta = {
-  title: 'UI Library/Strength Indicator',
+  title: 'Password Generator App/Strength Indicator',
   component: StrengthIndicatorStory,
   parameters: {
     layout: 'centered',
