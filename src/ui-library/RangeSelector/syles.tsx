@@ -33,6 +33,16 @@ export const StyledRangeInput = styled.div`
       position: relative;
       z-index: 1;
     }
+
+    &:hover::-webkit-slider-thumb {
+      background-color: ${({ theme }) => theme.colors.black};
+      border: 1px solid ${({ theme }) => theme.colors.green};
+    }
+
+    &:hover::-moz-range-thumb {
+      background-color: ${({ theme }) => theme.colors.black};
+      border: 1px solid ${({ theme }) => theme.colors.green};
+    }
   }
 `;
 
