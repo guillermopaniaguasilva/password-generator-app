@@ -20,6 +20,7 @@ export default function Button({
 
   return (
     <Btn
+      className="mt-3"
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

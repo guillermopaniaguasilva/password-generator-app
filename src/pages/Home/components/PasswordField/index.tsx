@@ -2,7 +2,7 @@ import hoverCopy from 'assets/images/fa-regular_copy.svg';
 import copy from 'assets/images/icon-copy.svg';
 import clipboardCopy from 'clipboard-copy';
 import { useEffect, useState } from 'react';
-import { Copied, Icon, Password } from './styles';
+import { Container, Copied, Icon, Password } from './styles';
 
 type PasswordFieldProps = {
   password: string;
@@ -39,8 +39,10 @@ export default function PasswordField({ password }: PasswordFieldProps) {
   };
 
   return (
-    <div className="d-flex justify-content-between w-100">
-      <Password isFilled={isFilled}>{label}</Password>
+    <Container className="d-flex justify-content-between w-100">
+      <Password className="text-truncate d-inline-block" $isFilled={isFilled}>
+        {label}
+      </Password>
       {hasCopied && <Copied>copied</Copied>}
       <Icon
         src={isHovered ? hoverCopy : copy}
@@ -49,6 +51,6 @@ export default function PasswordField({ password }: PasswordFieldProps) {
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleCopy}
       />
-    </div>
+    </Container>
   );
 }

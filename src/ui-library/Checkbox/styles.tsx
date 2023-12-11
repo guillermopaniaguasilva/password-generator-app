@@ -9,6 +9,7 @@ export const Box = styled.input`
   border: 2px solid ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.veryDarkGrey};
   outline: none;
+  cursor: pointer;
 
   &:checked {
     background-color: ${({ theme }) => theme.colors.green};
@@ -32,4 +33,5 @@ export const Box = styled.input`
 export const Label = styled.label`
   color: ${({ theme }) => theme.colors.white};
   margin-left: 14px;
+  cursor: pointer;
 `;

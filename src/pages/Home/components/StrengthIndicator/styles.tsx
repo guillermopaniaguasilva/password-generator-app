@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.veryDarkGrey};
+  background-color: ${({ theme }) => theme.colors.black};
   display: flex;
   padding: 14px 16px;
   align-items: center;
@@ -14,15 +14,15 @@ export const BarsContainer = styled.div`
 `;
 
 export const Bar = styled.div<{
-  shouldBeColored: boolean;
-  indicatorColor: string;
+  $shouldBeColored: boolean;
+  $indicatorColor: string;
 }>`
   width: 10px;
   height: 28px;
-  background-color: ${({ theme, indicatorColor, shouldBeColored }) =>
-    shouldBeColored ? indicatorColor : theme.colors.veryDarkGrey};
-  border: ${({ theme, shouldBeColored }) =>
-    !shouldBeColored && '2px solid' + theme.colors.white};
+  background-color: ${({ theme, $indicatorColor, $shouldBeColored }) =>
+    $shouldBeColored ? $indicatorColor : theme.colors.veryDarkGrey};
+  border: ${({ theme, $shouldBeColored }) =>
+    !$shouldBeColored && '2px solid' + theme.colors.white};
 `;
 
 export const StrengthLabel = styled.h4`

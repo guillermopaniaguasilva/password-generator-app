@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  background-color: ${({ theme }) => theme.colors.veryDarkGrey};
+  padding: 18px 16px;
+`;
+
 export const Password = styled.label<{
-  isFilled: boolean;
+  $isFilled: boolean;
 }>`
   width: 100%;
   color: ${({ theme }) => theme.colors.white};
@@ -9,7 +14,8 @@ export const Password = styled.label<{
   font-style: normal;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   line-height: normal;
-  opacity: ${({ isFilled }) => (isFilled ? '1' : '0.25')};
+  opacity: ${({ $isFilled }) => ($isFilled ? '1' : '0.25')};
+  max-width: 200px;
 `;
 
 export const Icon = styled.img`

@@ -31,15 +31,15 @@ export default function StrengthIndicator({
       : theme.colors.veryDarkGrey;
 
   return (
-    <Container>
+    <Container className="mt-5">
       <Label>strength</Label>
       <StrengthLabel>{strengthLabel}</StrengthLabel>
       <BarsContainer>
         {[...Array(4)].map((_, i) => (
           <Bar
             key={i}
-            shouldBeColored={i + 1 <= strength}
-            indicatorColor={indicatorColor}
+            $shouldBeColored={i + 1 <= strength}
+            $indicatorColor={indicatorColor}
           />
         ))}
       </BarsContainer>

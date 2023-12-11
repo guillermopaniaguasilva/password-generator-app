@@ -11,3 +11,11 @@
   box-sizing: border-box;
   font-family: 'JetBrainsMono';
 }
+
+#root {
+  background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
