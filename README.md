@@ -2,7 +2,7 @@
 
 This is a solution to [this](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh) [Frontend Mentor](https://www.frontendmentor.io) challenge.
 
-Deployed app can be reviewed [here](https://password-generator-app-cyan.vercel.app/).
+Deployed app can be reviewed [here](https://password-generator-app-guillermopaniaguasilva.vercel.app/).
 
 ## Tech Stack
 
