@@ -1,11 +1,12 @@
+import iconHover from 'assets/images/bx_arrow-to-left.svg';
+import icon from 'assets/images/icon-arrow-right.svg';
 import { useEffect, useState } from 'react';
-import PasswordField from './components/PasswordField';
-
 import { Button, Checkbox, RangeSelector } from 'ui-library/index';
 import {
   determinePasswordStrength,
   generatePassword,
 } from '../../helpers/password';
+import PasswordField from './components/PasswordField';
 import StrengthIndicator from './components/StrengthIndicator';
 import { Container, Heading } from './styles';
 
@@ -77,7 +78,13 @@ export default function Home() {
           setIsChecked={setIncludeSymbols}
         />
         <StrengthIndicator strength={strength} />
-        <Button text="generate" onClick={handleGeneratePassword} />
+        <Button
+          text="generate"
+          onClick={handleGeneratePassword}
+          iconSrc={icon}
+          hoverIconSrc={iconHover}
+          iconAlt="generate arrow"
+        />
       </Container>
     </>
   );
