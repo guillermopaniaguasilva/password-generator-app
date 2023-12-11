@@ -13,7 +13,7 @@ import { Container, Heading } from './styles';
 export default function Home() {
   const [password, setPassword] = useState<string>('');
   const [strength, setStrength] = useState<number>(0);
-  const [charLength, setCharLength] = useState<number>(10);
+  const [charLength, setCharLength] = useState<number>(0);
   const [includeUppercaseLetters, setIncludeUppercaseLetters] =
     useState<boolean>(false);
   const [includeLowercaseLetters, setIncludeLowercaseLetters] =
@@ -39,14 +39,23 @@ export default function Home() {
   ]);
 
   const handleGeneratePassword = () => {
-    const password = generatePassword(
-      charLength,
-      includeUppercaseLetters,
-      includeLowercaseLetters,
-      includeNumbers,
+    let password = '';
+
+    if (
+      includeUppercaseLetters ||
+      includeLowercaseLetters ||
+      includeNumbers ||
       includeSymbols
-    );
-    setPassword(password);
+    ) {
+      password = generatePassword(
+        charLength,
+        includeUppercaseLetters,
+        includeLowercaseLetters,
+        includeNumbers,
+        includeSymbols
+      );
+      setPassword(password);
+    }
   };
 
   return (
